@@ -5,6 +5,7 @@ torchvision==0.16.2
 numpy<2.0
 openmim
 mmengine
+importlib-metadata
 
 # Dependencias de build de mmaction2
 decord>=0.4.1
