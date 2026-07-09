@@ -1,4 +1,4 @@
-# 🎥 Vigía: Sistema de Detección de Eventos de Seguridad y Hurto con MMAction2
+# 🎥 Vigia: Sistema de Detección de Eventos de Seguridad y Hurto con MMAction2
 
 **Vigía** es una plataforma inteligente de análisis y clasificación de video orientada a la seguridad. Utilizando el framework de vanguardia **OpenMMLab MMAction2**, Vigía procesa videos de seguridad para clasificar automáticamente actividades y alertar sobre conductas delictivas (hurto), situaciones de violencia/riesgo, o confirmar actividades normales.
 
