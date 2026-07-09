@@ -1,3 +1,18 @@
+# Requerimientos base de mmaction2
 -r requirements/build.txt
 -r requirements/optional.txt
--r requirements/tests.txt
+
+# Librerías esenciales para la inferencia y Streamlit
+streamlit
+torch==2.1.2
+torchvision==0.16.2
+numpy<2.0
+openmim
+mmengine
+
+# MMCV desde el índice de OpenMMLab para CPU
+--find-links https://download.openmmlab.com/mmcv/dist/cpu/torch2.1.0/index.html
+mmcv==2.1.0
+
+# Instalar mmaction2 en modo editable
+-e .
