@@ -1,8 +1,4 @@
-# Requerimientos base de mmaction2
--r requirements/build.txt
--r requirements/optional.txt
-
-# Librerías esenciales para la inferencia y Streamlit
+# Dependencias principales y Streamlit
 streamlit
 torch==2.1.2
 torchvision==0.16.2
@@ -10,9 +6,29 @@ numpy<2.0
 openmim
 mmengine
 
-# MMCV desde el índice de OpenMMLab para CPU
+# Dependencias de build de mmaction2
+decord>=0.4.1
+einops
+matplotlib
+opencv-contrib-python
+Pillow
+scipy
+
+# Dependencias opcionales de mmaction2
+av>=9.0
+future
+imgaug
+librosa
+lmdb
+moviepy
+openai-clip
+packaging
+pims
+PyTurboJPEG
+soundfile
+tensorboard
+wandb
+
+# MMCV (versión CPU para PyTorch 2.1.2)
 --find-links https://download.openmmlab.com/mmcv/dist/cpu/torch2.1.0/index.html
 mmcv==2.1.0
-
-# Instalar mmaction2 en modo editable
--e .
