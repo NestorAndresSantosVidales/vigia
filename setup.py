@@ -48,11 +48,19 @@ def parse_requirements(fname='requirements.txt', with_version=True):
             target = line.split(' ')[1]
             for info in parse_require_file(target):
                 yield info
+        elif line.startswith('--') or line.startswith('-f '):
+            # Skip pip command line options like --find-links
+            return
+        elif line.startswith('-e '):
+            if '#egg=' in line:
+                info = {'line': line, 'package': line.split('#egg=')[1]}
+                yield info
+            else:
+                # Skip editable installs without egg name
+                return
         else:
             info = {'line': line}
-            if line.startswith('-e '):
-                info['package'] = line.split('#egg=')[1]
-            elif '@git+' in line:
+            if '@git+' in line:
                 info['package'] = line
             else:
                 # Remove versioning from the package
